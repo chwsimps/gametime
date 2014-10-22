@@ -1,26 +1,52 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  font-size: 62.5%;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.container {
+  @include outer-container;
+  max-width: 1024px;
+  height: 500px;
+  background-color: lightgrey;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.game-left {
+  @include span-columns(5);
+  background-color: grey;
+  height: 500px;
+  .goodguy {
+    width: 75%;
+    height: 250px;
+    background-color: lightblue;
+    margin: 0 auto;
+  }
+}
+
+.middle {
+  @include span-columns(2);
+  .pick {
+    width: 50%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: yellow;
+  }
+}
+
+.game-right {
+  @include span-columns(5);
+  background-color: grey;
+  height: 500px;
+  .badguy {
+    width: 75%;
+    height: 250px;
+    background-color: red;
+    margin: 0 auto;
   }
 }

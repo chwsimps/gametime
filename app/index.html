@@ -23,19 +23,27 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
+    <div class="container">
+
+      <div class="game-left">
+        <div class="goodguy">
+          <input class="clickgood" type="text" name="input" value="100">Good Guy</input>
+        </div>
+      </div> <!--game-left-->
+
+      <div class="middle">
+        <div class="pick"></div>
+        <button class="pick-player" type="button">Pick Player</button>
+      </div>
+
+      <div class="game-right">
+        <div class="badguy">
+        <input class="clickgood" type="text" name="input" value="100">Bad Guy</input>
+        </div>
+      </div> <!--game-right-->
+
+    </div> <!--container-->
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
