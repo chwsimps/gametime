@@ -11,42 +11,51 @@ body {
 .container {
   @include outer-container;
   max-width: 1024px;
-  height: 500px;
   background-color: lightgrey;
-  margin: 0 auto;
   overflow: auto;
+  padding: 10px;
+  margin: 120px 120px;
 }
 
 .game-left {
   @include span-columns(5);
   background-color: grey;
-  height: 500px;
+  height: 442px;
+  margin: 0;
   .goodguy {
     width: 100%;
-    height: 500px;
     background-color: lightblue;
     margin: 0 auto;
+    text-align: center;
+  }
+  img {
+    width: 50%;
+    height: 115px;
   }
 }
 
 .middle {
-  @include span-columns(2);
-  .pick {
-    width: 50%;
+  @include span-columns(2.25);
+  margin: 196px 1.29%;
+  .pick-player {
     height: 50px;
-    margin: 0 auto;
-    background-color: yellow;
+    width: 100%;
   }
 }
 
 .game-right {
   @include span-columns(5);
   background-color: grey;
-  height: 500px;
+  height: 442px;
+  margin: 0;
   .badguy {
     width: 100%;
-    height: 500px;
     background-color: red;
     margin: 0 auto;
+    text-align: center;
+  }
+  img {
+    width: 50%;
+    height: 115px;
   }
 }
