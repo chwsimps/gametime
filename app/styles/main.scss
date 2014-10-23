@@ -6,15 +6,16 @@
 // Custom Styles
 body {
   font-size: 62.5%;
+  background: url(../images/brickwall.png);
 }
 
 //Container ================================
 
 .container {
   @include outer-container;
-  max-width: 1024px;
+  max-width: 100%;
   background-color: lightgrey;
-  overflow: auto;
+  border-radius: 5px;
   padding: 10px;
   margin: 120px 120px;
 }
@@ -95,15 +96,17 @@ body {
     }
   }
 
+// Midal Inner ===========================
+
   .modal-inner {
     @include transition(opacity .25s ease);
     border-radius: $base-border-radius;
-    background: $modal-background;
+    background: url(../images/brickwall.png);
     margin: auto;
-    max-height: 95%;
+    max-height: 100%;
     position: relative;
     overflow: auto;
-    width: 95%;
+    width: 100%;
     padding: $modal-padding /2;
     margin-top: .6em;
 
@@ -121,7 +124,7 @@ body {
 
     h1 {
       color: $base-font-color;
-      margin-bottom: .6em;
+      margin-bottom: 30px;
       text-align: center;
       text-transform: capitalize;
       border-bottom: 1px solid;
@@ -129,34 +132,48 @@ body {
     }
 
 @mixin modal_position {
-  float: left;
   span {
     display: inline-block;
   }
   img {
-    width: 100px;
+    width: 111px;
     height: 75px;
     border-radius: 5px;
     &:hover {
       color: blue;
     }
   }
-
   p {
-    width: 100px;
+    width: 111px;
     font-size: 15px;
+    font-weight: bolder;
     text-align: center;
   }
 }
 
     .modal_left {
       @include modal_position;
+      width: 39%;
+      float: left;
+      margin: 0;
+    }
+
+    .modal_middle {
+      display: inline-block;
+      width: 22%;
+      text-align: center;
+      margin-top: 30px;
+      .modal-pick {
+        outline: none;
+      }
     }
 
     .modal_right {
       @include modal_position;
+      width: 39%;
       float: right;
     }
+
 
     a.cta {
       color: white;
@@ -185,14 +202,22 @@ body {
 .game-left {
   @include span-columns(5);
   background-color: blue;
+  border-radius: 5px;
   height: 450px;
   margin: 0;
   .goodguy {
 
+  .player_large {
+    display: none;
   }
   img {
-    width: 50%;
-    height: 115px;
+    width: 75%;
+  }
+  p {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    }
   }
 }
 
@@ -204,6 +229,7 @@ body {
   .pick-player {
     height: 50px;
     width: 100%;
+    outline: none;
   }
 }
 
@@ -212,6 +238,7 @@ body {
 .game-right {
   @include span-columns(5);
   background-color: red;
+  border-radius: 5px;
   height: 450px;
   margin: 0;
   .badguy {

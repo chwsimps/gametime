@@ -6,6 +6,17 @@
 //
 // });
 
+$('.player_picked1').click( function() {
+  $('.player_large').show();
+});
+
+
+
+// $(.modal-pick).on('click', function () {
+//
+//
+// });
+
 
 
 // Function for players to battle
@@ -14,23 +25,19 @@
 var Goodguy = function (options) {
   var options = options || {};
   this.name = options.name;
-  this.health = options.health || 100;
-  this.attack = options.attack;
+  this.health = 100;
+  this.attack = function (hurt) {
+    hurt.health = hurt.health - _.random(0,10);
+  };
 };
 
 var Badguy = function (options) {
   var options = options || {};
   this.name = options.name;
-  this.health = options.health || 100;
-  this.attack = options.attack;
-};
-
-Goodguy.prototype.attack = function (hurt) {
-  hurt.health = health - Math.random() * 10 + 1);
-}
-
-Badguy.prototype.attack = function (hurt) {
-  hurt.health = health - Math.random() * 10 + 1);
+  this.health = 100;
+  this.attack = function (hurt) {
+    hurt.health = hurt.health - _.random(0,10);
+  };
 };
 
 
@@ -39,7 +46,7 @@ var good1 = new Goodguy ({
 });
 
 var good2 = new Goodguy ({
-  name: 'Daniel LaRusso'
+  name: 'D. LaRusso'
 });
 
 var good3 = new Goodguy ({
@@ -47,7 +54,7 @@ var good3 = new Goodguy ({
 });
 
 var bad1 = new Badguy ({
-  name: "Dave Dragon",
+  name: "D. Dragon",
 });
 
 var bad2 = new Badguy ({
