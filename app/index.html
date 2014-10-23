@@ -25,25 +25,44 @@
 
     <div class="container">
 
-      <div class="game-left">
-        <div class="goodguy">
-          <img src="../images/ninja.jpg" alt="" /><input class="clickgood" type="text" name="input" value="100"></input>
-          <img src="../images/karate.jpg" alt="" /><input class="clickgood" type="text" name="input" value="100"></input>
-          <img src="../images/surf.png" alt="" /><input class="clickgood" type="text" name="input" value="100"></input>
-        </div>
-      </div> <!--game-left-->
-
-      <div class="middle">
-        <button class="pick-player" type="button">Fight!</button>
+      <div class="modal">
+  <label for="modal-1">
+    <div class="btn js-btn">Click for Modal</div>
+  </label>
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-window">
+    <div class="modal-inner">
+      <label class="modal-close" for="modal-1"></label>
+      <h1>Pick Your Player</h1>
+      <div class="modal_left">
+        <span><img src="../images/ninja.jpg" alt="" /><p>3 Ninjas</p></span>
+        <span><img src="../images/karate.jpg" alt="" /><p>D. LaRusso</p></span>
+        <span><img src="../images/surf.png" alt="" /><p>Surf Ninjas</p></span>
       </div>
+      <div class="modal_right">
+        <span><img src="../images/hulk.jpg" alt="" /><p>D. Dragon</p></span>
+        <span><img src="../images/cobra.jpg" alt="" /><p>Cobra Kai</p></span>
+        <span><img src="../images/leslie.jpg" alt="" /><p>Colonel Chi</p></span>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <div class="game-right">
-        <div class="badguy">
-        <img src="../images/hulk.jpg" alt="" /><input class="clickgood" type="text" name="input" value="100"></input>
-        <img src="../images/cobra.jpg" alt="" /><input class="clickgood" type="text" name="input" value="100"></input>
-        <img src="../images/leslie.jpg" alt="" /><input class="clickgood" type="text" name="input" value="100"></input>
-        </div>
-      </div> <!--game-right-->
+    <div class="game-left">
+      <div class="goodguy">
+        <input class="clickgood" type="text" name="input" value="100"></input>
+      </div>
+    </div> <!--game-left-->
+
+    <div class="middle">
+      <button class="pick-player" type="button">Fight!</button>
+    </div>
+
+    <div class="game-right">
+      <div class="badguy">
+        <input class="clickgood" type="text" name="input" value="100"></input>
+      </div>
+    </div> <!--game-right-->
 
     </div> <!--container-->
 

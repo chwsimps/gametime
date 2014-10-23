@@ -14,46 +14,48 @@
 var Goodguy = function (options) {
   var options = options || {};
   this.name = options.name;
-  this.health = options.health;
+  this.health = options.health || 100;
   this.attack = options.attack;
 };
 
 var Badguy = function (options) {
   var options = options || {};
   this.name = options.name;
+  this.health = options.health || 100;
   this.attack = options.attack;
-  // this.health = function (hurt) {
-  //   hurt.health =
-  // }
+};
+
+Goodguy.prototype.attack = function (hurt) {
+  hurt.health = health - Math.random() * 10 + 1);
+}
+
+Badguy.prototype.attack = function (hurt) {
+  hurt.health = health - Math.random() * 10 + 1);
 };
 
 
-
-
 var good1 = new Goodguy ({
-  name: "tum tum",
-  health: 100
+  name: "3 Ninjas",
 });
 
-// var good2 = new Goodguy ({
-//   name: 'Tum Tum'
-// });
-//
-// var good3 = new Goodguy ({
-//   name: 'Bob'
-// });
+var good2 = new Goodguy ({
+  name: 'Daniel LaRusso'
+});
+
+var good3 = new Goodguy ({
+  name: 'Surf Ninjas'
+});
 
 var bad1 = new Badguy ({
-  name: "hogan",
-  health: 100
+  name: "Dave Dragon",
 });
 
-// var bad2 = new Badguy ({
-//   name: 'mean'
-// });
-//
-// var bad3 = new Badguy ({
-//   name: 'meany'
-// });
+var bad2 = new Badguy ({
+  name: 'Cobra Kai'
+});
+
+var bad3 = new Badguy ({
+  name: 'Colonel Chi'
+});
 
 // }());
