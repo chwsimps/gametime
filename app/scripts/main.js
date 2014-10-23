@@ -9,31 +9,30 @@
 
 
 // Function for players to battle
-(function () {
+// (function () {
 
 var Goodguy = function (options) {
   var options = options || {};
   this.name = options.name;
-  this.maxhealth = options.maxhealth;
+  this.health = options.health;
   this.attack = options.attack;
-
 };
 
 var Badguy = function (options) {
   var options = options || {};
   this.name = options.name;
-  this.health = options.health;
-  this.maxhealth = function (hurt) {
-    hurt.status =
-  }
+  this.attack = options.attack;
+  // this.health = function (hurt) {
+  //   hurt.health =
+  // }
 };
 
 
 
 
 var good1 = new Goodguy ({
-  name: 'Daniel',
-  maxhealth: 100
+  name: "tum tum",
+  health: 100
 });
 
 // var good2 = new Goodguy ({
@@ -45,8 +44,8 @@ var good1 = new Goodguy ({
 // });
 
 var bad1 = new Badguy ({
-  name: 'evil',
-  maxhealth: 100
+  name: "hogan",
+  health: 100
 });
 
 // var bad2 = new Badguy ({
@@ -57,4 +56,4 @@ var bad1 = new Badguy ({
 //   name: 'meany'
 // });
 
-}());
+// }());
