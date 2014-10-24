@@ -1,15 +1,32 @@
-// $('.pick-player').click( function () {
-//
-//
-//    var random_num = Math.floor(Math.random() * (max - min)) + min;
-//    $('.clickgood .clickbad').val( random_num );
-//
-// });
+// Players being picked
 
-$('.player_picked1').click( function() {
-  $('.player_large').show();
+$('.player_picked1').on('click', function (event) {
+  event.preventDefault();
+  $('.player_large1').fadeIn();
+  $('.player_picked1').fadeTo(200,0.5);
+
 });
 
+$('.player_picked2').on('click', function (event) {
+  event.preventDefault();
+  $('.player_large2').fadeIn();
+  $('.player_picked2').fadeTo(200,0.5);
+
+});
+
+$('.player_picked3').on('click', function (event) {
+  event.preventDefault();
+  $('.player_large3').fadeIn();
+  $('.player_picked3').fadeTo(200,0.5);
+
+});
+
+
+$('.head1').click(function() {
+  $('.div1').addClass('open').removeClass('close');
+  $('.div2').addClass('close').removeClass('open');
+  $('.div3').addClass('close').removeClass('open');
+});
 
 
 // $(.modal-pick).on('click', function () {

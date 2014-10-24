@@ -113,8 +113,8 @@ body {
     @include media($medium-screen) {
       padding: $modal-padding;
       width: 60%;
-      max-height: 60%;
-      margin-top: 10em;
+      max-height: 85%;
+      // margin-top: 10em;
     }
 
     @include media($large-screen) {
@@ -139,9 +139,7 @@ body {
     width: 111px;
     height: 75px;
     border-radius: 5px;
-    &:hover {
-      color: blue;
-    }
+    background-color: blue;
   }
   p {
     width: 111px;
@@ -153,14 +151,14 @@ body {
 
     .modal_left {
       @include modal_position;
-      width: 39%;
+      width: 37%;
       float: left;
       margin: 0;
     }
 
     .modal_middle {
       display: inline-block;
-      width: 22%;
+      width: 26%;
       text-align: center;
       margin-top: 30px;
       .modal-pick {
@@ -170,10 +168,9 @@ body {
 
     .modal_right {
       @include modal_position;
-      width: 39%;
+      width: 37%;
       float: right;
     }
-
 
     a.cta {
       color: white;
@@ -207,9 +204,16 @@ body {
   margin: 0;
   .goodguy {
 
-  .player_large {
+  .player_large1 {
     display: none;
   }
+  .player_large2 {
+    display: none;
+  }
+  .player_large3 {
+    display: none;
+  }
+
   img {
     width: 75%;
   }
