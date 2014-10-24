@@ -213,9 +213,11 @@ body {
     display: none;
   }
   .goody {
-    position: absolute;
     margin: 0 auto;
-    width: 80%;
+    img {
+      height: 230px;
+      width: 100%;
+    }
   }
   p {
     font-size: 50px;
@@ -254,6 +256,13 @@ body {
   }
   .bad_large3 {
     display: none;
+  }
+  .baddie {
+    margin: 0 auto;
+    img {
+      height: 230px;
+      width: 100%;
+    }
   }
   span {
     position: absolute;

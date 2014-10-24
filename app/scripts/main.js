@@ -1,5 +1,5 @@
 // Players being picked - GOODY GUYS
-$('.pick_player').on('click', function (event) {
+$('.player_picked1').on('click', function (event) {
   event.preventDefault();
   $('.good_large1').fadeIn();
   $('.player_picked1').fadeTo(200,0.5);
@@ -20,7 +20,7 @@ $('.player_picked3').on('click', function (event) {
 
 });
 
-// Players being picked - GOODY GUYS
+// Players being picked - BADDIE GUYS
 $('.player_picked4').on('click', function (event) {
   event.preventDefault();
   $('.bad_large1').fadeIn();
