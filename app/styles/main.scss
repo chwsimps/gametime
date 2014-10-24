@@ -204,13 +204,13 @@ body {
   margin: 0;
   .goodguy {
 
-  .player_large1 {
+  .good_large1 {
     display: none;
   }
-  .player_large2 {
+  .good_large2 {
     display: none;
   }
-  .player_large3 {
+  .good_large3 {
     display: none;
   }
 
@@ -252,4 +252,14 @@ body {
     width: 50%;
     height: 115px;
   }
+}
+
+.bad_large1 {
+  display: none;
+}
+.bad_large2 {
+  display: none;
+}
+.bad_large3 {
+  display: none;
 }

@@ -1,85 +1,91 @@
 // Players being picked
 
-$('.player_picked1').on('click', function (event) {
+$('.player_picked1').one('click', function (event) {
   event.preventDefault();
-  $('.player_large1').fadeIn();
+  $('.good_large1').fadeIn();
   $('.player_picked1').fadeTo(200,0.5);
 
 });
 
-$('.player_picked2').on('click', function (event) {
+$('.player_picked2').one('click', function (event) {
   event.preventDefault();
-  $('.player_large2').fadeIn();
+  $('.good_large2').fadeIn();
   $('.player_picked2').fadeTo(200,0.5);
 
 });
 
-$('.player_picked3').on('click', function (event) {
+$('.player_picked3').one('click', function (event) {
   event.preventDefault();
-  $('.player_large3').fadeIn();
+  $('.good_large3').fadeIn();
   $('.player_picked3').fadeTo(200,0.5);
 
 });
 
 
-$('.head1').click(function() {
-  $('.div1').addClass('open').removeClass('close');
-  $('.div2').addClass('close').removeClass('open');
-  $('.div3').addClass('close').removeClass('open');
-});
 
-
-// $(.modal-pick).on('click', function () {
-//
-//
-// });
-
-
-
-// Function for players to battle
-// (function () {
+var Baddude = function (name) {
+  this.name = name;
+  this.health = 100;
+  this.attack = function (hurt) {
+    return hurt.health = hurt.health - _.random(1, 10);
+  };
+  this.special = function (hurt) {
+    return hurt.health = hurt.health - _.random(10, 30);
+  };
+};
 
 var Goodguy = function (options) {
-  var options = options || {};
+  var special_pt, attack_pt;
+  options = options || {};
   this.name = options.name;
+  this.type = options.type;
+  switch (this.type) {
+    case "player_picked1":
+      attack_pt = 10;
+      special_pt = 20;
+    break;
+    case "player_picked2":
+      attack_pt = 15;
+      special_pt = 25;
+    break;
+    case "player_picked3":
+      attack_pt = 5;
+      special_pt = 30;
+    break;
+  }
   this.health = 100;
-  this.attack = function (hurt) {
-    hurt.health = hurt.health - _.random(0,10);
+  this. attack = function (hurt) {
+    return hurt.health = hurt.health - attack_pt;
+  };
+  this.special = function (attackee) {
+    return hurt.health = hurt.health - special_pt;
   };
 };
 
-var Badguy = function (options) {
-  var options = options || {};
-  this.name = options.name;
-  this.health = 100;
-  this.attack = function (hurt) {
-    hurt.health = hurt.health - _.random(0,10);
-  };
-};
+
+var good_guy = new Goodguy({
+    name: $(this).text(),
+    type: $(this).attr('name')
+  });
+
+var bad_dude = new Baddude({
+    name: $(this).text(),
+    type: $(this).attr('name')
+  });
+
+      $('.goody').prepend(good_guy.name).find('.clickgood').text(good_guy.health);
+    $('.bady').prepend(bad_dude.name).find('.clickbad').text(bad_dude.health);
 
 
-var good1 = new Goodguy ({
-  name: "3 Ninjas",
-});
+$('.choppin').on('click', function (event) {
+  event.preventDefault();
 
-var good2 = new Goodguy ({
-  name: 'D. LaRusso'
-});
+  good_guy.attack(bad_dude);
+  $('.clickbad').text(bad_dude.health);
 
-var good3 = new Goodguy ({
-  name: 'Surf Ninjas'
-});
+  bad_dude.attack(good_guy);
+  $('.clickgood').text(good_guy.health);
 
-var bad1 = new Badguy ({
-  name: "D. Dragon",
-});
-
-var bad2 = new Badguy ({
-  name: 'Cobra Kai'
-});
-
-var bad3 = new Badguy ({
-  name: 'Colonel Chi'
 });
 
 // }());
