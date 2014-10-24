@@ -198,12 +198,11 @@ body {
 
 .game-left {
   @include span-columns(5);
+  position: relative;
   background-color: blue;
   border-radius: 5px;
   height: 450px;
   margin: 0;
-  .goodguy {
-
   .good_large1 {
     display: none;
   }
@@ -213,8 +212,10 @@ body {
   .good_large3 {
     display: none;
   }
-
-  img {
+  span {
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 10%;
     width: 75%;
   }
   p {
@@ -222,7 +223,6 @@ body {
     font-size: 40px;
     font-weight: bold;
     }
-  }
 }
 
 // Middle Section ==========================
@@ -230,10 +230,12 @@ body {
 .middle {
   @include span-columns(2.25);
   margin: 196px 1.29%;
-  .pick-player {
+  text-align: center;
+  .choppin {
     height: 50px;
-    width: 100%;
+    width: 75%;
     outline: none;
+    animation-delay: 0.1s;
   }
 }
 
@@ -245,21 +247,24 @@ body {
   border-radius: 5px;
   height: 450px;
   margin: 0;
-  .badguy {
-
+  .bad_large1 {
+    display: none;
   }
-  img {
-    width: 50%;
-    height: 115px;
+  .bad_large2 {
+    display: none;
   }
-}
-
-.bad_large1 {
-  display: none;
-}
-.bad_large2 {
-  display: none;
-}
-.bad_large3 {
-  display: none;
+  .bad_large3 {
+    display: none;
+  }
+  span {
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 10%;
+    width: 75%;
+  }
+  p {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+  }
 }

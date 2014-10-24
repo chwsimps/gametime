@@ -1,27 +1,49 @@
-// Players being picked
-
-$('.player_picked1').one('click', function (event) {
+// Players being picked - GOODY GUYS
+$('.player_picked1').on('click', function (event) {
   event.preventDefault();
   $('.good_large1').fadeIn();
   $('.player_picked1').fadeTo(200,0.5);
 
 });
 
-$('.player_picked2').one('click', function (event) {
+$('.player_picked2').on('click', function (event) {
   event.preventDefault();
   $('.good_large2').fadeIn();
   $('.player_picked2').fadeTo(200,0.5);
 
 });
 
-$('.player_picked3').one('click', function (event) {
+$('.player_picked3').on('click', function (event) {
   event.preventDefault();
   $('.good_large3').fadeIn();
   $('.player_picked3').fadeTo(200,0.5);
 
 });
 
+// Players being picked - GOODY GUYS
+$('.player_picked4').on('click', function (event) {
+  event.preventDefault();
+  $('.bad_large1').fadeIn();
+  $('.player_picked4').fadeTo(200,0.5);
 
+});
+
+$('.player_picked5').on('click', function (event) {
+  event.preventDefault();
+  $('.bad_large2').fadeIn();
+  $('.player_picked5').fadeTo(200,0.5);
+
+});
+
+$('.player_picked6').on('click', function (event) {
+  event.preventDefault();
+  $('.bad_large3').fadeIn();
+  $('.player_picked6').fadeTo(200,0.5);
+
+});
+
+
+//Good Guy / Bad Guy setup =================
 
 var Baddude = function (name) {
   this.name = name;
@@ -38,27 +60,27 @@ var Goodguy = function (options) {
   var special_pt, attack_pt;
   options = options || {};
   this.name = options.name;
-  this.type = options.type;
-  switch (this.type) {
-    case "player_picked1":
-      attack_pt = 10;
-      special_pt = 20;
-    break;
-    case "player_picked2":
-      attack_pt = 15;
-      special_pt = 25;
-    break;
-    case "player_picked3":
-      attack_pt = 5;
-      special_pt = 30;
-    break;
-  }
+  // this.type = options.type;
+  // switch (this.type) {
+  //   case "1":
+  //     attack_pt = _.random(0,5);
+  //     special_pt = _.random(15,40);
+  //   break;
+  //   case "2":
+  //     attack_pt = _.random(5,10);
+  //     special_pt = _.random(10,15);
+  //   break;
+  //   case "3":
+  //     attack_pt = _.random(0, 15);
+  //     special_pt = _.random(15,20);
+  //   break;
+  // };
   this.health = 100;
-  this. attack = function (hurt) {
-    return hurt.health = hurt.health - attack_pt;
+  this.attack = function (hurt) {
+    return hurt.health = hurt.health - _.random(1, 10);
   };
-  this.special = function (attackee) {
-    return hurt.health = hurt.health - special_pt;
+  this.special = function (hurt) {
+    return hurt.health = hurt.health - _.random(10, 30);
   };
 };
 
@@ -70,11 +92,10 @@ var good_guy = new Goodguy({
 
 var bad_dude = new Baddude({
     name: $(this).text(),
-    type: $(this).attr('name')
   });
 
       $('.goody').prepend(good_guy.name).find('.clickgood').text(good_guy.health);
-    $('.bady').prepend(bad_dude.name).find('.clickbad').text(bad_dude.health);
+    $('.baddie').prepend(bad_dude.name).find('.clickbad').text(bad_dude.health);
 
 
 $('.choppin').on('click', function (event) {
@@ -86,6 +107,27 @@ $('.choppin').on('click', function (event) {
   bad_dude.attack(good_guy);
   $('.clickgood').text(good_guy.health);
 
+
+  if(good_guy.health >= 0) {
+      $('.clickgood').text(good_guy.health);
+    } else {
+      $('.clickgood').text('You Be Dead');
+      // $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
+      $('.choppin').hide();
+    };
+
+    if(bad_dude.health >= 0) {
+        $('.clickbad').text(bad_dude.health);
+      } else {
+        $('.clickbad').text('You Be Dead');
+        // $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
+        $('.choppin').hide();
+      };
+
+});
+
+$('.choppin').click( function () {
+  $('.choppin').toggleClass('animated shake');
 });
 
 // }());
