@@ -212,17 +212,16 @@ body {
   .good_large3 {
     display: none;
   }
-  span {
+  .goody {
     position: absolute;
-    margin-top: 120px;
-    margin-left: 10%;
-    width: 75%;
+    margin: 0 auto;
+    width: 80%;
   }
   p {
-    display: inline-block;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    }
+    text-align: center;
+  }
 }
 
 // Middle Section ==========================
@@ -263,8 +262,8 @@ body {
     width: 75%;
   }
   p {
-    display: inline-block;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
+    text-align: center;
   }
 }

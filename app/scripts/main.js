@@ -1,5 +1,5 @@
 // Players being picked - GOODY GUYS
-$('.player_picked1').on('click', function (event) {
+$('.pick_player').on('click', function (event) {
   event.preventDefault();
   $('.good_large1').fadeIn();
   $('.player_picked1').fadeTo(200,0.5);
@@ -60,21 +60,6 @@ var Goodguy = function (options) {
   var special_pt, attack_pt;
   options = options || {};
   this.name = options.name;
-  // this.type = options.type;
-  // switch (this.type) {
-  //   case "1":
-  //     attack_pt = _.random(0,5);
-  //     special_pt = _.random(15,40);
-  //   break;
-  //   case "2":
-  //     attack_pt = _.random(5,10);
-  //     special_pt = _.random(10,15);
-  //   break;
-  //   case "3":
-  //     attack_pt = _.random(0, 15);
-  //     special_pt = _.random(15,20);
-  //   break;
-  // };
   this.health = 100;
   this.attack = function (hurt) {
     return hurt.health = hurt.health - _.random(1, 10);
@@ -94,6 +79,7 @@ var bad_dude = new Baddude({
     name: $(this).text(),
   });
 
+//Update variable to be on top of page and add switch statement to include above variables.
       $('.goody').prepend(good_guy.name).find('.clickgood').text(good_guy.health);
     $('.baddie').prepend(bad_dude.name).find('.clickbad').text(bad_dude.health);
 
@@ -111,7 +97,7 @@ $('.choppin').on('click', function (event) {
   if(good_guy.health >= 0) {
       $('.clickgood').text(good_guy.health);
     } else {
-      $('.clickgood').text('You Be Dead');
+      $('.clickgood').text('You Be Dead!');
       // $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
       $('.choppin').hide();
     };
@@ -119,7 +105,7 @@ $('.choppin').on('click', function (event) {
     if(bad_dude.health >= 0) {
         $('.clickbad').text(bad_dude.health);
       } else {
-        $('.clickbad').text('You Be Dead');
+        $('.clickbad').text('You Be Dead!');
         // $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
         $('.choppin').hide();
       };
