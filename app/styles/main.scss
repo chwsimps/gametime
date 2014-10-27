@@ -103,7 +103,7 @@ body {
     border-radius: $base-border-radius;
     background: url(../images/brickwall.png);
     margin: auto;
-    max-height: 100%;
+    height: 50%;
     position: relative;
     overflow: auto;
     width: 100%;
@@ -194,11 +194,21 @@ body {
   }
 }
 
+.gif {
+  position: absolute;
+  width: 35%;
+  img {
+    display: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+  }
+}
+
 // Game Left ===============================
 
 .game-left {
   @include span-columns(5);
-  position: relative;
   background-color: blue;
   border-radius: 5px;
   height: 450px;
@@ -218,13 +228,19 @@ body {
       height: 230px;
       width: 100%;
     }
+    p {
+      display: none;
+      margin-top: 15px;
+    }
   }
   p {
     font-size: 50px;
+    margin-bottom: 25px;
     font-weight: bold;
     text-align: center;
   }
 }
+
 
 // Middle Section ==========================
 
