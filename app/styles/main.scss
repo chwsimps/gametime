@@ -14,7 +14,6 @@ body {
 .container {
   @include outer-container;
   max-width: 100%;
-  background-color: lightgrey;
   border-radius: 5px;
   padding: 10px;
   margin: 120px 120px;
@@ -27,10 +26,18 @@ body {
   $modal-close-color: $light-gray;
   $modal-image-height: 135px;
   $modal-image-width: $modal-image-height;
+  position: absolute;
+  border-radius: 10px;
+  width: 81.5%;
+  height: 470px;
+  background-image: url('../images/background.jpg');
+  margin: -10px 0px 0px -10px;
+  text-align: center;
 
   label {
     cursor: pointer;
     margin-bottom: 0;
+    margin-top: 90px;
   }
 
   label img {
@@ -52,6 +59,10 @@ body {
 
   .modal-open {
     overflow: hidden;
+  }
+
+  .afro_ninja {
+    padding: 30px;
   }
 
   .modal-window { // overlay
@@ -119,7 +130,7 @@ body {
 
     @include media($large-screen) {
       width: 76.5%;
-      margin-top: 10em;
+      margin-top: 18em;
     }
 
     h1 {
@@ -194,7 +205,7 @@ body {
   }
 }
 
-.gif {
+.gif_good {
   position: absolute;
   width: 35%;
   img {
@@ -202,6 +213,30 @@ body {
     border-radius: 5px;
     width: 100%;
     height: 200px;
+  }
+  p {
+    display: none;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
+
+.gif_bad {
+  position: absolute;
+  width: 35%;
+  margin-left: 58.75%;
+  img {
+    display: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+  }
+  p {
+    display: none;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
   }
 }
 
@@ -279,15 +314,20 @@ body {
       height: 230px;
       width: 100%;
     }
+    p {
+      display: none;
+      margin-top: 15px;
+    }
   }
-  span {
-    position: absolute;
-    margin-top: 120px;
-    margin-left: 10%;
-    width: 75%;
-  }
+  // span {
+  //   position: absolute;
+  //   margin-top: 120px;
+  //   margin-left: 10%;
+  //   width: 75%;
+  // }
   p {
     font-size: 50px;
+    margin-bottom: 25px;
     font-weight: bold;
     text-align: center;
   }

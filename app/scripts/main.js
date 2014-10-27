@@ -14,43 +14,43 @@ $('.player_picked1').on('click', function (event) {
   event.preventDefault();
   $('.good_large1, .par_large1').fadeIn();
   // $('.player_picked1').fadeTo(200,0.5);
-  $('.ninja_gif').fadeIn();
+  $('.ninja_gif, .gif_desc1').fadeIn();
 
 });
 
 $('.player_picked2').on('click', function (event) {
   event.preventDefault();
-  $('.good_large2').fadeIn();
-  $('.karate_gif').fadeIn();
+  $('.good_large2, .par_large2').fadeIn();
+  $('.karate_gif, .gif_desc2').fadeIn();
 
 });
 
 $('.player_picked3').on('click', function (event) {
   event.preventDefault();
-  $('.good_large3').fadeIn();
-  $('.surf_gif').fadeIn();
+  $('.good_large3, .par_large3').fadeIn();
+  $('.surf_gif, .gif_desc3').fadeIn();
 
 });
 
 // Players being picked - BADDIE GUYS
 $('.player_picked4').on('click', function (event) {
   event.preventDefault();
-  $('.bad_large1').fadeIn();
-  $('.player_picked4').fadeTo(200,0.5);
+  $('.bad_large1, .par_bad1').fadeIn();
+  $('.hulk_gif, .gif_desc4').fadeIn();
 
 });
 
 $('.player_picked5').on('click', function (event) {
   event.preventDefault();
-  $('.bad_large2').fadeIn();
-  $('.player_picked5').fadeTo(200,0.5);
+  $('.bad_large2, .par_bad2').fadeIn();
+  $('.cobra_gif, .gif_desc5').fadeIn();
 
 });
 
 $('.player_picked6').on('click', function (event) {
   event.preventDefault();
-  $('.bad_large3').fadeIn();
-  $('.player_picked6').fadeTo(200,0.5);
+  $('.bad_large3, .par_bad3').fadeIn();
+  $('.leslie_gif, .gif_desc6').fadeIn();
 
 });
 
@@ -127,8 +127,7 @@ $('.choppin').on('click', function (event) {
 
 $('.choppin').click( function () {
   $('.choppin').toggleClass('animated shake');
-  $('.clickgood').toggleClass('animated shake');
-  $('.clickbad').toggleClass('animated shake');
+  $('.clickgood, .clickbad').toggleClass('animated shake');
 });
 
 // }());
