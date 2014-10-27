@@ -7,4 +7,4 @@ How to play:
 * Run npm install
 * Run bower install
 
-Libraries used: jQuery, Underscore
+Libraries used: jQuery, Underscore, SASS
