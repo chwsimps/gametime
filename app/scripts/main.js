@@ -110,15 +110,13 @@ $('.choppin').on('click', function (event) {
       $('.clickgood').text(good_guy.health);
     } else {
       $('.clickgood').text('You Be Dead!');
-      // $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
       $('.choppin').hide();
     };
 
   if(bad_dude.health > 0) {
-        $('.clickbad').text(bad_dude.health);
+      $('.clickbad').text(bad_dude.health);
     } else {
       $('.clickbad').text('You Be Dead!');
-      // $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
       $('.choppin').hide();
     };
 });
