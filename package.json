@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "express": "^4.10.0",
+    "gulp": "^3.8.10",
     "gzippo": "^0.2.0"
   }
 }
